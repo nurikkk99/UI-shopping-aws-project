@@ -1,0 +1,36 @@
+.title {
+  font-size: 18px;
+  color: lightgoldenrodyellow;
+  background: darkslategrey;
+  margin: 0%;
+  height: 47px;
+  font-weight: inherit;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  background: white;
+  font-size: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.2;
+}
+
+.priceText {
+  padding-left: 20px;
+}

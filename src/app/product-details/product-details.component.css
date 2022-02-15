@@ -1,0 +1,21 @@
+img, .Price, .title, .Description {
+  padding-left: 23px;
+}
+
+.Price {
+  font-size: 23px;
+  color: tomato;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 30px;
+  color: black;
+  height: 43px;
+  font-weight: inherit;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+<div *ngIf="product">
+
+  <h2 class="title">{{product.manufacturer | uppercase}} {{product.name}}</h2>
+  <img  *ngIf="product.image" [src]=product.image width="500" height="500">
+  <p class = "Price">
+    {{product.price}} Rubles</p>
+
+  <ul>
+    <li>Name: {{product.name}}</li>
+    <li>Manufacturer: {{product.manufacturer}}</li>
+    <li>Type: {{product.type}}</li>
+    <li>Name: {{product.name}}</li>
+    <li>Release date: {{product.releaseDate}}</li>
+  </ul>
+  <p class ="Description">{{product.description}}</p>
+</div>
