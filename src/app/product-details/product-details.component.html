@@ -1,7 +1,9 @@
 <div *ngIf="product">
-
+  <a href="/" class="bn3637 bn36" (click)="goBack()">Back</a>
   <h2 class="title">{{product.manufacturer | uppercase}} {{product.name}}</h2>
-  <img  *ngIf="product.image" [src]=product.image width="500" height="500">
+    <div *ngIf="images">
+      <img  *ngFor="let image of images" [src]=image.imageURI width="500px" height="500px">
+    </div>
   <p class = "Price">
     {{product.price}} Rubles</p>
 
@@ -9,8 +11,7 @@
     <li>Name: {{product.name}}</li>
     <li>Manufacturer: {{product.manufacturer}}</li>
     <li>Type: {{product.type}}</li>
-    <li>Name: {{product.name}}</li>
     <li>Release date: {{product.releaseDate}}</li>
   </ul>
-  <p class ="Description">{{product.description}}</p>
+<!--  <p class ="Description">{{product.description}}</p>-->
 </div>

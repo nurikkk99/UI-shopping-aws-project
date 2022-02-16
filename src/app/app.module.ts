@@ -9,6 +9,7 @@ import { DescriptionComponent } from './description/description.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { MainPageComponent } from './main-page/main-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainPageComponent } from './main-page/main-page.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
