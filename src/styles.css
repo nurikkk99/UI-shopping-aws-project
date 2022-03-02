@@ -108,3 +108,6 @@ label {
   border-radius: 2px;
   background-color: #EEEEEE;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

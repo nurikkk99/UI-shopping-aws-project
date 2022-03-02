@@ -10,6 +10,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import {AppRoutingModule} from "./app-routing.module";
 import { MainPageComponent } from './main-page/main-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
+import {ProductFormComponent} from "./product-form/product-form.component";
 
 @NgModule({
   declarations: [
@@ -18,14 +22,16 @@ import {HttpClientModule} from "@angular/common/http";
     TopBarComponent,
     DescriptionComponent,
     ProductDetailsComponent,
-    MainPageComponent
+    MainPageComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
-    ],
+    HttpClientModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

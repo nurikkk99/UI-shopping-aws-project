@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MockProducts} from "../mock-products";
 import {Product} from "../product";
 import {ProductService} from "../product.service";
 
@@ -12,7 +11,9 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -23,4 +24,7 @@ export class ProductListComponent implements OnInit {
       .subscribe(products => this.products = products)
   }
 
+  goCreationProductPage() {
+
+  }
 }

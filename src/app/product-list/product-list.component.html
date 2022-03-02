@@ -1,5 +1,5 @@
 <h2 class="title">Product list</h2>
-
+<button class="bn3637 bn36" routerLink="/product-create">Create Product</button>
 <div *ngFor="let product of products" class="product-list">
   <h3>
    <a
@@ -13,16 +13,3 @@
     Price: {{product.price}}
   </p>
 </div>
-
-
-
-
-<!--<ul class="products">-->
-<!--  <li *ngFor="let product of products">-->
-<!--    <button type="button" (click)="onSelect(product)"></button>-->
-<!--    <span class="badge">{{product.id}}</span>-->
-<!--    <span class="name">{{product.name}}</span>-->
-<!--  </li>-->
-<!--</ul>-->
-
-<!--<app-product-detail [product]="selectedProduct"></app-product-detail>-->

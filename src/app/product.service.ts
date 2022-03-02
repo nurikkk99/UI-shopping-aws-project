@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {Product} from "./product";
-import {MockProducts} from "./mock-products";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {CreateProductDto} from "./product-class";
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    Authorization: 'my-auth-token'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +31,7 @@ export class ProductService {
     return this.http.get<Product>(url);
   }
 
+  create(model: CreateProductDto): Observable<CreateProductDto> {
+    return this.http.post<CreateProductDto>(this.productsUrl, model, httpOptions)
+  }
 }
