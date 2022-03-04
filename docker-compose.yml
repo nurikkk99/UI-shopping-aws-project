@@ -1,0 +1,12 @@
+version: '3'
+services:
+  aws-shopping-ui:
+    image: aws-shopping-ui
+    build:
+      context: ../../
+      dockerfile: ../../Dockerfile
+#      args:
+#        - "REST_PROTOCOL=http"
+#        - "REST_ADDRESS=localhost:8081"
+    ports:
+      - "8085:80"
