@@ -17,7 +17,7 @@ const httpOptions = {
 })
 export class ProductService {
 
-  private productsUrl = environment.apiUrl + '/api/goods'
+  private productsUrl = 'http://' + environment.backUrl + '/api/goods'
 
   constructor(
     private http: HttpClient,
