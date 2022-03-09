@@ -4,6 +4,7 @@ import {ApplicationLoadBalancedEc2Service} from "aws-cdk-lib/aws-ecs-patterns";
 import {InstanceClass, InstanceSize, InstanceType, SubnetType, Vpc} from "aws-cdk-lib/aws-ec2";
 import {Cluster, ContainerImage} from "aws-cdk-lib/aws-ecs";
 import {Repository} from "aws-cdk-lib/aws-ecr";
+import {StringParameter} from "aws-cdk-lib/aws-ssm";
 
 export class HelloCdkStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -43,11 +44,11 @@ export class HelloCdkStack extends Stack {
       publicLoadBalancer: true,
       taskImageOptions: {
         environment: {
-         REST_API_URL : 'localhost:8081'
+         API_URL : StringParameter.valueForStringParameter(this, "adminServiceLoadBalancerDNSName")
         },
         image: ContainerImage.fromEcrRepository(
           Repository.fromRepositoryName(this, 'Repository', ecrRepositoryName.valueAsString),
-          '3e1d4af0730af3386df39ce65c8310c3086ced82'
+          imageTag.valueAsString
         )
       }
     })

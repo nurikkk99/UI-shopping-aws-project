@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import {Product} from "./product";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CreateProductDto} from "./product-class";
+import {environment} from "../environments/environment";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,7 +17,7 @@ const httpOptions = {
 })
 export class ProductService {
 
-  private productsUrl = 'http://localhost:8081/api/goods'
+  private productsUrl = environment.apiUrl + '/api/goods'
 
   constructor(
     private http: HttpClient,
